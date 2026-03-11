@@ -1,0 +1,8 @@
+name: "CRM Dashboard"
+description: "AI Agent CRM Dashboard — View contacts, deals, pipeline, and activities"
+icon: "brain-circuit"
+version: "1.0.0"
+entry: "index.html"
+runtime: "static"
+permissions:
+  - database

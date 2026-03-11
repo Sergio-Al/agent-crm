@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-logo">🧠</span>
+        <span class="sidebar-title">Agent CRM</span>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item active" data-view="insights">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Dashboard</span>
+        </li>
+        <li class="nav-item" data-view="contacts">
+          <span class="nav-icon">👥</span>
+          <span class="nav-label">Contacts</span>
+        </li>
+        <li class="nav-item" data-view="deals">
+          <span class="nav-icon">💼</span>
+          <span class="nav-label">Deals</span>
+        </li>
+        <li class="nav-item" data-view="activities">
+          <span class="nav-icon">📋</span>
+          <span class="nav-label">Activities</span>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <div id="view-insights" class="view active"></div>
+      <div id="view-contacts" class="view"></div>
+      <div id="view-deals" class="view"></div>
+      <div id="view-activities" class="view"></div>
+    </main>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/insights.js"></script>
+  <script src="js/contacts.js"></script>
+  <script src="js/deals.js"></script>
+  <script src="js/activities.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

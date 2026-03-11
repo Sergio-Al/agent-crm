@@ -1,0 +1,22 @@
+{
+  "name": "agent-crm",
+  "version": "0.1.0",
+  "description": "AI Agent CRM MVP — Built on DenchClaw",
+  "type": "module",
+  "scripts": {
+    "setup": "bash scripts/setup.sh",
+    "dev": "npx denchclaw --workspace ./workspace",
+    "seed:schema": "duckdb workspace/workspace.duckdb < scripts/seed-schema.sql",
+    "seed:data": "duckdb workspace/workspace.duckdb < scripts/seed-data.sql",
+    "seed": "npm run seed:schema && npm run seed:data"
+  },
+  "keywords": [
+    "crm",
+    "ai",
+    "agent",
+    "denchclaw",
+    "duckdb"
+  ],
+  "author": "",
+  "license": "MIT"
+}

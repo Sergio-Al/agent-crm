@@ -44,6 +44,7 @@ Browser UI
 
 - **Node.js >= 22** ([download](https://nodejs.org/))
 - **OpenAI API key** ([get one](https://platform.openai.com/api-keys))
+- **OpenClaw CLI** — installed globally (`npm install -g openclaw`). Required by DenchClaw at runtime.
 - **DuckDB CLI** (optional — only for manual schema inspection)
 
 ---
@@ -55,14 +56,20 @@ Browser UI
 git clone https://github.com/Sergio-Al/agent-crm.git
 cd agent-crm
 
-# 2. Set your OpenAI API key
+# 2. Install global dependencies
+npm install -g openclaw
+
+# 3. Set your OpenAI API key
 cp .env.example .env
 # Edit .env and set OPENAI_API_KEY=sk-...
 
-# 3. Run setup (installs denchclaw, seeds the database)
+# 4. Run setup (installs denchclaw, seeds the database)
 npm run setup
 
-# 4. Start the agent
+# 5. Bootstrap DenchClaw (first time only — sets up the runtime and opens the web UI)
+npm run bootstrap
+
+# 6. Start the agent (subsequent runs)
 npm run dev
 ```
 

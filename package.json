@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "setup": "bash scripts/setup.sh",
-    "dev": "npx denchclaw --workspace ./workspace",
+    "bootstrap": "npx denchclaw bootstrap",
+    "dev": "npx denchclaw start",
     "seed:schema": "duckdb workspace/workspace.duckdb < scripts/seed-schema.sql",
     "seed:data": "duckdb workspace/workspace.duckdb < scripts/seed-data.sql",
     "seed": "npm run seed:schema && npm run seed:data"
